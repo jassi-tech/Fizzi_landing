@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
+import { Analytics } from "@vercel/analytics/next";
 
 import "./app.css";
 import Header from "@/components/Header";
@@ -29,6 +30,7 @@ export default function RootLayout({
           <ViewCanvas />
         </main>
         <Footer />
+        <Analytics />
       </body>
       <PrismicPreview repositoryName={repositoryName} />
     </html>
